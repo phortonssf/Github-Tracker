@@ -1,0 +1,12 @@
+nice-card {
+     #nice-card{
+        display: block;
+        border-radius: 5px;
+        border-left: solid 2px $accent;
+        text-align: center;
+        max-width: 500px;
+        width: 80vw;
+        margin: 20px auto;
+    }
+
+}

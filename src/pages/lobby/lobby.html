@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Git ReadMe </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ <nice-card [hidden]="searched"></nice-card>
+  <ion-row class="row search-row">
+    <ion-searchbar #box
+      (change)="search(box)"
+      (keyup.enter)="searchQuery=box.value"
+      (blur)="values=box.value"
+      (ionCancel) = "clear()">
+    </ion-searchbar>
+    <div *ngIf="repos | async as repos">
+      <div > Found {{ repos.items.length }} For "{{ searchQuery }}" Search </div>
+  </div>
+   </ion-row>
+   <ion-grid >
+      <ion-row >
+        <!-- component for filter buttons-->
+        <filter-buttons 
+          class="top-5-row"
+          [repos]="repos | async"
+          [(activeLanguage)]="activeLanguage">
+        </filter-buttons>
+      </ion-row>
+   </ion-grid>
+   
+<!------- Repos are displayed below here ------->
+  <div class="col-container">
+     <repo-card 
+        *ngFor="let repo of repos
+        | async 
+        | language: activeLanguage; 
+        let i = index" 
+        
+          class="card-container" 
+          [Repo]="repo"
+          [RepoNum]="i+1"
+          [ActiveLanguage]="activeLanguage"
+          >
+      </repo-card>
+  </div>
+
+</ion-content>

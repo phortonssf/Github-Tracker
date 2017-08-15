@@ -1,0 +1,15 @@
+<ng-container class="top-5-row" 
+    *ngFor = "let language of repos 
+    | itemiter; 
+    let i = index">
+        <button 
+        class="filterButton"
+        [ngClass]="{'selectedLang': language.key == activeLanguage}"
+        [hidden]="!language"
+        (click)="selectLanguage(language.key)" 
+        *ngIf = " i <= 4 " 
+        ion-button color="default">
+            {{ language.key}} <br/> 
+            {{ language.val }} 
+        </button>  
+</ng-container>

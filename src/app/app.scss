@@ -1,6 +1,32 @@
 // http://ionicframework.com/docs/theming/
 
+//$accent: #a3e2e2;
+.scroll-content{
+    min-height: 90vh;
+}
+@mixin border($style, $color, $sides) {
+    @if ($style != "") {
 
+        @if ($sides == "") {
+            border: $style $color;
+
+        } @else {
+            @each $side in $sides {
+               @if ($side == 'top' or
+                    $side == 'right' or
+                    $side == 'bottom' or
+                    $side == 'left') {
+
+                    border-#{$side}: $style $color;
+                }
+            }
+        }  
+
+    }
+}
+.repo-card:hover{
+     @include border(2px solid, $accent, bottom);   
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

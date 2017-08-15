@@ -1,0 +1,14 @@
+<ion-card 
+    [@flyInOut]="state"
+    class="repo-card"
+    (click)="toReadme(repo)">
+    <ion-card-header text-center>
+           <p class="repo-num"> #{{ repoNum }}</p>
+           <b class="repo-title">{{ repo.name }}</b>
+    </ion-card-header>
+        <h3 text-center> LANGUAGE: {{ repo.language }} </h3>
+    <ion-card-content text-center>
+        <h5> <strong>Repo Description </strong></h5>
+        <p> {{ repo.description }}</p>
+    </ion-card-content>
+</ion-card>

@@ -1,0 +1,28 @@
+register-form {
+    .regTitle {
+       
+    }
+    .registration-container {
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        // min-height: 75vh;
+        max-width: 400px;
+        margin: auto;
+    }
+    .registration-rows {
+        flex: 1;
+    }
+    .registration-eula {
+        flex: 1;
+        margin: 16px;
+    }
+    .register-button {
+        flex: 1;
+        justify-content: center;
+        margin: 6px;
+    }
+
+}

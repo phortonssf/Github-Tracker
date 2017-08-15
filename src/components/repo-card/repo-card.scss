@@ -1,0 +1,45 @@
+repo-card {
+  .card-container{
+        width: 91%;
+        max-width: 500px;
+        margin: 10px auto;
+   }
+   .repo-num{
+          float: left;
+      }
+    .repo-title{
+        text-transform: uppercase;
+    }
+  .repo-card{
+    // -webkit-animation: fadein 2s;
+    // -moz-animation: fadein 2s;
+    // animation: fadein 2s;
+    // background-color: #eaedf2;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+      &:hover{
+        transform: scale(1.2);
+        background-color:#f8f8f8;
+      }
+     
+  }
+  @media screen and (min-width: 1024px) {
+    .card-container{
+      flex: 1 0 40%;
+    &:nth-child(even){
+        margin-left: 27px;
+        margin-right: 5%;
+    }
+     &:nth-child(odd){
+        margin-left: 5%;
+        margin-right: 27px;
+    }
+            
+    }
+  }  
+
+  
+}

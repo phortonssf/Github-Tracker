@@ -1,0 +1,60 @@
+filter-buttons {
+  *{
+     box-sizing: border-box;
+     transition: all .300s;
+    }
+   .filterButton{
+      margin: 4px 10px;
+      min-width: 70px;
+      min-height: 44px;
+      width: inherit;
+      height: 4.2 rem;
+      line-height: 1.4;
+      max-width: 150px;
+      padding: 10px;
+      transition: padding 0.1s ease-in-out;
+      &:hover, :active{
+          //transform: scale(1.2);
+          //background-color:#239b9b !important;
+          // z-index: 10;
+          // border-bottom: 2px solid #a3e2e2;
+          // padding: 30px;
+         }
+       }
+
+   .selectedLang{
+      color: $accent;
+      z-index: 10;
+      border-bottom: 2px solid $accent;
+      padding: 25px 10px;
+   }
+   
+    @media screen and (min-width: 1024px) {
+      .filterButton{
+          min-width: 110px;
+      }
+      .selectedLang{
+        color: $accent;
+        z-index: 10;
+        border-bottom: 2px solid $accent;
+        padding: 27px 10px;
+     }
+    }
+  // @-moz-keyframes buttonGrow {
+  //   from{padding: 5px;}
+  //   to{ padding: 30px;}
+  //  }
+  //   @-webkit-keyframes buttonGrow {
+  //   from{padding: 5px;}
+  //   to{ padding: 30px;}
+  //  }
+  //  @-ms-keyframes buttonGrow {
+  //   from{padding: 5px;}
+  //   to{ padding: 30px;}
+  //  }
+  //  @-o-keyframes{
+  //   from{padding: 5px;}
+  //   to{ padding: 30px;}
+  //  }
+
+}
