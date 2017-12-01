@@ -7,6 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class FilterButtonsComponent {
   @Input() repos: Object;
   @Input() activeLanguage: String;
+  
   @Output() activeLanguageChange = new EventEmitter();
 
   constructor() {
