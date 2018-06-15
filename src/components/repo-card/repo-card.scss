@@ -11,21 +11,21 @@ repo-card {
         text-transform: uppercase;
     }
   .repo-card{
-    // -webkit-animation: fadein 2s;
-    // -moz-animation: fadein 2s;
-    // animation: fadein 2s;
-    // background-color: #eaedf2;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    animation: fadein 2s;
+    background-color: #eaedf2;
     margin: auto;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
     max-width: 500px;
-      &:hover{
-        transform: scale(1.2);
-        background-color:#f8f8f8;
-      }
-     
+    &:hover{
+      transform: scale(1.2);
+      @include border(2px solid, $accent, bottom);   
+    }
   }
+  
   @media screen and (min-width: 1024px) {
     .card-container{
       flex: 1 0 40%;

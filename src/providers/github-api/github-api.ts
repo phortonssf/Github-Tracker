@@ -15,6 +15,7 @@ export class GithubApiProvider {
     public http: Http
   ){}
   repos: any;  
+  
   getRepos(values): Observable<Array<any>>{
     return this.repos = this.http.get("https://api.github.com/search/repositories?q=" + values + "&sort=stars&order=desc")
       .map((res) => {
